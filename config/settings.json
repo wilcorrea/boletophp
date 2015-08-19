@@ -1,0 +1,5 @@
+{
+  "104": {"id":"104", "model": "Cef", "template": "104.html", "css": "104.css"},
+  "756": {"id":"756", "model": "Sicoob", "template": "756.html", "css": "756.css"},
+  "341": {"id":"341", "model": "Itau", "template": "341.html", "css": "341.css"}
+}

@@ -1,0 +1,335 @@
+<div id="container">
+
+  <div id="instr_header" style="background: url('{lib_page}/images/logo_empresa.png') no-repeat top left;">
+    <h1>{sys_title}</h1>
+    <address>{blt_cedente_nome}<br></address>
+    <address>{blt_cedente_endereco} - {blt_cedente_bairro}<br></address>
+    <address>{blt_cedente_cidade} - {blt_cedente_uf} / {blt_cedente_cep}</address>
+  </div>
+
+  <div id="boleto">
+
+    <div class="cut">
+      <p>Corte na linha pontilhada</p>
+    </div>
+    
+    <br>
+
+    <table class="itau-table no-border" cellspacing="0" cellpadding="0" width="666" border="">
+      <tbody>
+        <tr>
+          <th class="itau-cp" width="150" valign="bottom">
+            <img src="{lib_page}/boleto/341/images/logo.jpg" width="150" height="40" border="0" alt="li">
+          </th>
+          <th width="3" valign="bottom">
+            <img height="22" src="{lib_page}/images/3.png" width="2" border="0" alt="3">
+          </th>
+          <th class="cpt" width="58" valign="bottom">
+            <div align="center">
+              <font class="bc">{blt_banco_codigo}</font>
+            </div>
+          </th>
+          <th width="3" valign="bottom">
+            <img height="22" src="{lib_page}/images/3.png" width="2" border="0" alt="">
+          </th>
+          <th class="ld" align="right" width="452" valign="bottom">
+            <span class="ld">
+              <span class="campotitulo">{blt_linha_digitavel}</span>
+            </span>
+          </th>
+        </tr>
+        <tr>
+          <th colspan="5">
+            <img height="2" src="{lib_page}/images/2.png" width="666" border="0" alt="">
+          </th>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="itau-table" cellspacing="0" cellpadding="0" width="666" border="">
+      <tbody>
+        <tr>
+          <td class="itau-cp" valign="top" width="301">
+            <div class="itau-ct">Cedente</div>
+            <div class="itau-cv">{blt_cedente_nome}&nbsp;</div>
+          </td>
+          <td class="itau-cp" valign="top" width="125">
+            <div class="itau-ct">Agência/Código do Cedente</div>
+            <div class="itau-cv">{blt_cedente_agencia} / {blt_cedente_contrato} &nbsp;</div>
+          </td>
+          <td class="itau-cp" valign="top" width="45">
+            <div class="itau-ct">Espécie</div>
+            <div class="itau-cv">R$</div>
+          </td>
+          <td class="itau-cp" valign="top" width="55">
+            <div class="itau-ct">Quantidade</div>
+            <div class="itau-cv"></div>
+          </td>
+          <td class="itau-cp" valign="top" width="140">
+            <div class="itau-ct">Nosso número</div>
+            <div class="itau-cv itau-right">{blt_nosso_numero}</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="itau-table" cellspacing="0" cellpadding="0" width="666" border="">
+      <tbody>
+        <tr>
+          <td class="itau-cp" valign="top" width="216">
+            <div class="itau-ct" >Número do documento</div>
+            <div class="itau-cv">{blt_numero_documento}</div>
+          </td>
+          <td class="itau-cp" valign="top" width="135">
+            <div class="itau-ct">CPF/CNPJ</div>
+            <div class="itau-cv">{blt_cedente_cnpj}</div>
+          </td>
+          <td class="itau-cp" valign="top" width="135">
+            <div class="itau-ct">Vencimento</div>
+            <div class="itau-cv">{blt_data_vencimento}</div>
+          </td>
+          <td class="itau-cp" valign="top" width="180">
+            <div class="itau-ct">Valor documento</div>
+            <div class="itau-cv itau-right">{blt_valor}</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="itau-table" cellspacing="0" cellpadding="0" width="666" border="">
+      <tbody>
+        <tr>
+          <td class="itau-cp" valign="top" width="120">
+            <div class="itau-ct">(-)Desconto / Abatimentos</div>
+            <div class="itau-cv">&nbsp;</div>
+          </td>
+          <td class="itau-cp" valign="top" width="120">
+            <div class="itau-ct">(-)Outras deduções</div>
+            <div class="itau-cv">&nbsp;</div>
+          </td>
+          <td class="itau-cp" valign="top" width="120">
+            <div class="itau-ct">(+)Mora / Multa</div>
+            <div class="itau-cv">&nbsp;</div>
+          </td>
+          <td class="itau-cp" valign="top" width="120">
+            <div class="itau-ct">(+)Outros acréscimos</div>
+            <div class="itau-cv">&nbsp;</div>
+          </td>
+          <td class="itau-cp" valign="top" width="186">
+            <div class="itau-ct">(=)Valor cobrado</div>
+            <div class="itau-cv">&nbsp;</div>
+          </td>
+        </tr>
+    </table>
+
+    <table class="itau-table" cellspacing="0" cellpadding="0" width="666" border="">
+      <tbody>
+        <tr>
+          <td class="itau-cp">
+            <div class="itau-ct">Sacado</div>
+            <div class="itau-cv">{blt_sacado_nome}</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="itau-table no-border" cellspacing="0" cellpadding="0" width="666" border="">
+      <tbody>
+        <tr>
+          <td class="no-border itau-ct" width="8" height="12"></td>
+          <td class="no-border itau-ct" align="left" width="325">Demonstrativo</td>
+          <td class="no-border itau-ct" align="right" width="325">Autenticação mecânica</td>
+          <td class="no-border itau-ct" width="8" height="12"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    <div class="cut">
+      <p>Corte na linha pontilhada</p>
+    </div>
+
+    <br>
+
+    <table class="itau-table no-border" cellspacing="0" cellpadding="0" width="666" border="">
+      <tbody>
+        <tr>
+          <th class="itau-cp" width="150" valign="bottom">
+            <img src="{lib_page}/boleto/341/images/logo.jpg" width="150" height="40" border="0" alt="li">
+          </th>
+          <th width="3" valign="bottom">
+            <img height="22" src="{lib_page}/images/3.png" width="2" border="0" alt="3">
+          </th>
+          <th class="cpt" width="58" valign="bottom">
+            <div align="center">
+              <font class="bc">{blt_banco_codigo}</font>
+            </div>
+          </th>
+          <th width="3" valign="bottom">
+            <img height="22" src="{lib_page}/images/3.png" width="2" border="0" alt="">
+          </th>
+          <th class="ld" align="right" width="452" valign="bottom">
+            <span class="ld">
+              <span class="campotitulo">{blt_linha_digitavel}</span>
+            </span>
+          </th>
+        </tr>
+        <tr>
+          <th colspan="5">
+            <img height="2" src="{lib_page}/images/2.png" width="666" border="0" alt="">
+          </th>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="itau-table no-border" cellspacing="0" cellpadding="0" width="666" border="">
+      <tbody>
+        <tr>
+          <td class="itau-cp" colspan="6">
+            <div class="itau-ct">Local de Pagamento</div>
+            <div class="itau-cv">Pag&aacute;vel em qualquer Banco at&eacute; o vencimento</div>
+          </td>
+          <td class="itau-cp" width="185">
+            <div class="itau-ct">Vencimento</div>
+            <div class="itau-cv itau-right">{blt_data_vencimento}</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="itau-cp" colspan="6">
+            <div class="itau-ct">Cedente</div>
+            <div class="itau-cv">{blt_cedente_nome}</div>
+          </td>
+          <td class="itau-cp" width="185">
+            <div class="itau-ct">Agência/Código cedente</div>
+            <div class="itau-cv itau-right">{blt_cedente_agencia} / {blt_cedente_contrato}</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="itau-cp" width="120">
+            <div class="itau-ct">Data do documento</div>
+            <div class="itau-cv">{blt_data_documento}</div>
+          </td>
+          <td class="itau-cp" width="160" colspan="2">
+            <div class="itau-ct">N&deg; documento</div>
+            <div class="itau-cv">{blt_numero_documento}</div>
+          </td>
+          <td class="itau-cp" width="71">
+            <div class="itau-ct">Espécie doc.</div>
+            <div class="itau-cv">&nbsp;</div>
+          </td>
+          <td class="itau-cp" width="40">
+            <div class="itau-ct">Aceite</div>
+            <div class="itau-cv">&nbsp;</div>
+          </td>
+          <td class="itau-cp" width="90">
+            <div class="itau-ct">Data processamento</div>
+            <div class="itau-cv">{blt_data_processamento}</div>
+          </td>
+          <td class="itau-cp" width="185">
+            <div class="itau-ct">Nosso número</div>
+            <div class="itau-cv itau-right">{blt_nosso_numero}</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="itau-cp" width="120">
+            <div class="itau-ct">Uso do Banco</div>
+            <div class="itau-cv">&nbsp;</div>
+          </td>
+          <td class="itau-cp" width="90">
+            <div class="itau-ct">Carteira</div>
+            <div class="itau-cv">109</div>
+          </td>
+          <td class="itau-cp" width="70">
+            <div class="itau-ct">Espécie</div>
+            <div class="itau-cv">R$</div>
+          </td>
+          <td class="itau-cp" width="111" colspan="2">
+            <div class="itau-ct">Quantidade</div>
+            <div class="itau-cv">&nbsp;</div>
+          </td>
+          <td class="itau-cp" width="90">
+            <div class="itau-ct">Valor Documento</div>
+            <div class="itau-cv">&nbsp;</div>
+          </td>
+          <td class="itau-cp" width="185">
+            <div class="itau-ct"> (=) Valor documento </div>
+            <div class="itau-cv itau-right">{blt_valor}</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="itau-cp no-bold b-left" colspan="6" rowspan="5" valign="top">
+            <div class="itau-instrucoes">
+              <div class="blt_descricao">Parcela {blt_parcela} => {blt_descricao}</div>
+              <p><b>Instruções para recebimento:</b></p>
+              <p>- MULTA DE {blt_multa_valor}% E JUROS DE {blt_juros_valor}% AO DIA APÓS {blt_data_vencimento}</p>
+              <p>- DESCONTO DE R$ {blt_desconto_valor} ATÉ {blt_data_vencimento} </p>
+              <p>- ABATIMENTO DE R$ {blt_abatimento_valor}</p>
+              <p>- NÃO RECEBER APÓS {blt_dias_vencimento} DIAS DO VENCIMENTO.</p>
+            </div>
+          </td>
+          <td class="itau-cp" width="185">
+            <div class="itau-ct"> (-) Desconto / Abatimentos </div>
+            <div class="itau-cv itau-right">&nbsp;</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="itau-cp" width="185">
+            <div class="itau-ct"> (-) Outras deduções </div>
+            <div class="itau-cv itau-right">&nbsp;</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="itau-cp" width="185">
+            <div class="itau-ct"> (+) Mora / Multa </div>
+            <div class="itau-cv itau-right">&nbsp;</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="itau-cp" width="185">
+            <div class="itau-ct"> (+) Outros acréscimos </div>
+            <div class="itau-cv itau-right">&nbsp;</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="itau-cp" width="185">
+            <div class="itau-ct"> (=) Valor cobrado </div>
+            <div class="itau-cv itau-right">&nbsp;</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="itau-cp b-left b-right" colspan="6">
+            <div class="itau-ct">Sacado</div>
+            <div class="itau-cv">{blt_sacado_nome}</div>
+            <div class="itau-cv">{blt_sacado_endereco}, {blt_sacado_bairro}</div>
+            <div class="itau-cv">{blt_sacado_cidade} - {blt_sacado_uf} / {blt_sacado_cep}</div>
+          </td>
+          <td class="itau-cp b-left" width="185" valign="bottom">
+            <div class="itau-ct itau-table b-bottom">C&oacute;d. baixa</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="itau-table no-border" cellspacing="0" cellpadding="0" width="666" border="">
+      <tbody>
+        <tr>
+          <td class="no-border" width="7" height="12"></td>
+          <td class="itau-ct no-border" width="409" height="12">Sacador/Avalista</td>
+          <td class="itau-ct no-border" width="250" height="12">
+            <div class="itau-right">
+              Autenticação mecânica - <b class="itau-cp">Ficha de Compensação</b>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+    
+    <div class="barcode">
+      <p>{blt_codigo_barras}</p>
+    </div>
+
+  </div>
+</div>

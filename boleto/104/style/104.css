@@ -1,0 +1,173 @@
+@media screen,print {
+
+    /* *** TIPOGRAFIA BASICA *** */
+
+    html, body {
+      font-family: Arial;
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .notice {
+      color: red;
+    }
+
+
+    /* *** LINHAS GERAIS *** */
+
+    #container {
+      width: 666px;
+      margin: 0px auto;
+      padding-bottom: 0px;
+    }
+
+    #instructions {
+      margin: 0;
+      padding: 0 0 20px 0;
+    }
+
+    #boleto {
+      width: 666px;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /* *** CABECALHO *** */
+
+    #instr_header {
+      padding-left: 160px;
+      height: 65px;
+    }
+
+    #instr_header h1 {
+      font-size: 16px;
+      margin: 5px 0px;
+    }
+
+    #instr_header address {
+      font-style: normal;
+      font-size: 9px;
+    }
+
+    #instr_content {
+
+    }
+
+    #instr_content h2 {
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    #instr_content p {
+      font-size: 10px;
+      margin: 4px 0px;
+    }
+
+    #instr_content ol {
+      font-size: 10px;
+      margin: 5px 0;
+    }
+
+    #instr_content ol li {
+      font-size: 10px;
+      text-indent: 10px;
+      margin: 2px 0px;
+      list-style-position: inside;
+    }
+
+    #instr_content ol li p {
+      font-size: 10px;
+      padding-bottom: 4px;
+    }
+
+
+    /* *** BOLETO *** */
+
+    #boleto .cut {
+      width: 666px;
+      margin: 0px auto;
+      border-bottom: 1px black dashed;
+    }
+
+    #boleto .cut p {
+      margin: 0 0 5px 0;
+      padding: 0px;
+      font-family: 'Arial Narrow';
+      font-size: 9px;
+      color: black;
+    }
+
+    .cp {
+      font: bold 10px Arial; 
+      color: black
+    }
+    .ti {
+      font: 9px Arial, Helvetica, sans-serif;
+    }
+    .ld { 
+      font: bold 15px Arial; 
+      color: #000000;
+    }
+    .ct { 
+      font: 9px "Arial Narrow"; 
+      color: #000033;
+    }
+
+    .cn {
+      font: 9px Arial; 
+      color: black;
+    }
+
+    .bc {
+      font: bold 20px Arial; 
+      color: #000000 
+    }
+
+    .ld2 { 
+      font: bold 12px Arial; 
+      color: #000000;
+    }
+
+    div.footer {
+      margin-bottom: 30px;
+    }
+
+    div.footer p {
+      width: 88px;
+      margin: 0;
+      padding: 0;
+      padding-left: 525px;
+      font-family: 'Arial Narro';
+      font-size: 9px;
+      color: black;
+    }
+
+    div.barcode {
+      width: 666px;
+      margin-bottom: 0px;
+    }
+    
+    .blt_descricao {
+      background: none repeat scroll 0 0 #FFFFFF;
+      color: #000000;
+      font-size: 10px;
+      height: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 460px;
+    }
+
+  }
+
+@media print {
+
+  #instructions {
+    height: 1px;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+}

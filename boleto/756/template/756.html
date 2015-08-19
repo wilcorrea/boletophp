@@ -1,0 +1,330 @@
+<div id="container">
+
+  <div id="instr_header" style="background: url('{lib_page}/images/logo_empresa.png') no-repeat top left;">
+    <h1>{sys_title}</h1>
+    <address>{blt_cedente_nome}<br></address>
+    <address>{blt_cedente_endereco} - {blt_cedente_bairro}<br></address>
+    <address>{blt_cedente_cidade} - {blt_cedente_uf} / {blt_cedente_cep}</address>
+  </div>
+
+  <div id="boleto">
+
+    <div class="cut">
+      <p>Corte na linha pontilhada</p>
+    </div> 
+
+    <table cellpadding="0" border="0" cellspacing="0" class="header">
+      <tbody>
+        <tr>
+          <td width="150"><img src="{lib_page}/boleto/756/images/756.jpg" alt=""/></td>
+          <td width="50">
+            <div class="field_cod_banco">{blt_banco_codigo}</div>
+          </td>
+          <td class="linha_digitavel">{blt_linha_digitavel}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" class="line">
+      <tbody>
+        <tr class="titulos">
+          <td class="cedente">Cedente</td>
+          <td class="ag_cod_cedente">Agência / Código do Cedente</td>
+          <td class="especie">Espécie</td>
+          <td class="qtd">Quantidade</td>
+          <td class="nosso_numero">Nosso número</td>
+        </tr>
+
+        <tr class="campos">
+          <td class="cedente">{blt_cedente_nome}&nbsp;</td>
+          <td class="ag_cod_cedente">{blt_cedente_agencia} / {blt_cedente_contrato} &nbsp;</td>
+          <td class="especie">R$&nbsp;</td>
+          <td class="qtd">10&nbsp;</td>
+          <td class="nosso_numero">{blt_nosso_numero}&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" class="line">
+      <tbody>
+        <tr class="titulos">
+          <td class="num_doc">Número do documento</td>
+          <td class="contrato">Contrato</td>
+          <td class="cpf_cei_cnpj">CPF/CEI/CNPJ</td>
+          <td class="vencmento">Vencimento</td>
+          <td class="valor_doc">Valor documento</td>
+        </tr>
+        <tr class="campos">
+          <td class="num_doc">{blt_numero_documento}</td>
+          <td class="contrato"></td>
+          <td class="cpf_cei_cnpj">{blt_cedente_cnpj}</td>
+          <td class="vencimento">{blt_data_vencimento}</td>
+          <td class="valor_doc">{blt_valor}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" class="line">
+      <tbody>
+        <tr class="titulos">
+          <td class="desconto">(-) Desconto / Abatimento</td>
+          <td class="outras_deducoes">(-) Outras deduções</td>
+          <td class="mora_multa">(+) Mora / Multa</td>
+          <td class="outros_acrescimos">(+) Outros acréscimos</td>
+          <td class="valor_cobrado">(=) Valor cobrado</td>
+        </tr>
+        <tr class="campos">
+          <td class="desconto">&nbsp;</td>
+          <td class="outras_deducoes">&nbsp;</td>
+          <td class="mora_multa">&nbsp;</td>
+          <td class="outros_acrescimos">&nbsp;</td>
+          <td class="valor_cobrado">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <table cellpadding="0" cellspacing="0" class="line">
+      <tbody>
+        <tr class="titulos">
+          <td class="sacado">Sacado</td>
+        </tr>
+        <tr class="campos">
+          <td class="sacado">{blt_sacado_nome}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <p>Autenticação mecânica</p>
+    </div>
+
+    <div class="cut">
+      <p>Corte na linha pontilhada</p>
+    </div>
+
+    <table cellpadding="0" border="0" cellspacing="0" class="header">
+      <tbody>
+        <tr>
+          <td width="150"><img src="{lib_page}/boleto/756/images/756.jpg"></td>
+          <td width="50">
+            <div class="field_cod_banco">{blt_banco_codigo}</div>
+          </td>
+          <td class="linha_digitavel">{blt_linha_digitavel}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" class="line">
+      <tbody>
+        <tr class="titulos">
+          <td class="local_pagto">Local de pagamento</td>
+          <td class="vencimento2">Vencimento</td>
+        </tr>
+        <tr class="campos">
+          <td class="local_pagto">QUALQUER BANCO ATÉ O VENCIMENTO</td>
+          <td class="vencimento2">{blt_data_vencimento}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" class="line">
+      <tbody>
+        <tr class="titulos">
+          <td class="cedente2">Cedente</td>
+          <td class="ag_cod_cedente2">Agência/Código cedente</td>
+        </tr>
+        <tr class="campos">
+          <td class="cedente2">{blt_cedente_nome}</td>
+          <td class="ag_cod_cedente2">{blt_cedente_agencia} / {blt_cedente_contrato}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" class="line">
+      <tbody>
+        <tr class="titulos">
+          <td class="data_doc">Data do documento</td>
+          <td class="num_doc2">No. documento</td>
+          <td class="especie_doc">Espécie doc.</td>
+          <td class="aceite">Aceite</td>
+          <td class="data_process">Data process.</td>
+          <td class="nosso_numero2">Nosso número</td>
+        </tr>
+        <tr class="campos">
+          <td class="data_doc">{blt_data_documento}</td>
+          <td class="num_doc2">{blt_numero_documento}</td>
+          <td class="especie_doc">DM</td>
+          <td class="aceite">N</td>
+          <td class="data_process">{blt_data_processamento}</td>
+          <td class="nosso_numero2">{blt_nosso_numero}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" class="line">
+      <tbody>
+        <tr class="titulos">
+          <td class="reservado">Uso do  banco</td>
+          <td class="carteira">Carteira</td>
+          <td class="especie2">Espécie</td>
+          <td class="qtd2">Quantidade</td>
+          <td class="xvalor">x Valor</td>
+          <td class="valor_doc2">(=) Valor documento</td>
+        </tr>
+        <tr class="campos">
+          <td class="reservado">&nbsp;</td>
+          <td class="carteira">1 &nbsp;</td>
+          <td class="especie2">R$</td>
+          <td class="qtd2">10</td>
+          <td class="xvalor">10</td>
+          <td class="valor_doc2">{blt_valor}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <table cellpadding="0" cellspacing="0" class="line">
+      <tbody>
+        <tr><td rowspan="6" class="last_line">
+            <table cellpadding="0" cellspacing="0" class="line">
+              <tbody>
+                <tr class="titulos">
+                  <td class="instrucoes">
+                    Instruções (Texto de responsabilidade do cedente)
+                  </td>
+                </tr>
+                <tr class="campos">
+                  <td rowspan="5" class="instrucoes">
+                    <div class="blt_descricao">Parcela {blt_parcela} => {blt_descricao}</div>
+                    <p><b>Instruções para recebimento:</b></p>
+                    <p>- MULTA DE {blt_multa_valor}% E JUROS DE {blt_juros_valor}% AO DIA APÓS {blt_data_vencimento}</p>
+                    <p>- DESCONTO DE R$ {blt_desconto_valor} ATÉ {blt_data_vencimento} </p>
+                    <p>- ABATIMENTO DE R$ {blt_abatimento_valor}</p>
+                    <p>- NÃO RECEBER APÓS {blt_dias_vencimento} DIAS DO VENCIMENTO.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table cellpadding="0" cellspacing="0" class="line">
+              <tbody>
+                <tr class="titulos">
+                  <td class="desconto2">(-) Desconto / Abatimento</td>
+                </tr>
+                <tr class="campos">
+                  <td class="desconto2">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table cellpadding="0" cellspacing="0" class="line">
+              <tbody>
+                <tr class="titulos">
+                  <td class="outras_deducoes2">(-) Outras deduções</td>
+                </tr>
+                <tr class="campos">
+                  <td class="valor_doc"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table cellpadding="0" cellspacing="0" class="line">
+              <tbody>
+                <tr class="titulos">
+                  <td class="mora_multa2">(+) Mora / Multa</td>
+                </tr>
+                <tr class="campos">
+                  <td class="mora_multa2">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table cellpadding="0" cellspacing="0" class="line">
+              <tbody>
+                <tr class="titulos">
+                  <td class="outros_acrescimos2">(+) Outros Acréscimos</td>
+                </tr>
+                <tr class="campos">
+                  <td class="valor_doc"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="last_line">
+            <table cellpadding="0" cellspacing="0" class="line">
+              <tbody>
+                <tr class="titulos">
+                  <td class="valor_cobrado2">(=) Valor cobrado</td>
+                </tr>
+                <tr class="campos">
+                  <td class="valor_cobrado2">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <table cellpadding="0" cellspacing="0" class="line">
+      <tbody>
+        <tr class="titulos">
+          <td class="sacado2">Sacado</td>
+        </tr>
+        <tr class="campos">
+          <td class="sacado2">
+            <p>{blt_sacado_nome}</p>
+            <p>{blt_sacado_endereco}, {blt_sacado_bairro}</p>
+            <p>{blt_sacado_cidade} - {blt_sacado_uf} / {blt_sacado_cep}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>		
+
+    <table cellpadding="0" cellspacing="0" class="line">
+      <tbody>
+        <tr class="titulos">
+          <td colspan="2" class="sacador_avalista">Sacador/Avalista</td>
+        </tr>
+        <tr class="campos">
+          <td class="sacador_avalista">&nbsp;</td>
+          <td class="cod_baixa">Cód. baixa</td>
+        </tr>
+      </tbody>
+    </table>		
+
+    <div class="footer">
+      <p>Autenticação mecânica</p>
+    </div>
+
+    <div class="barcode">
+      <p>{blt_codigo_barras}</p>
+    </div>
+
+    <div class="cut">
+      <p>Corte na linha pontilhada</p>
+    </div>
+
+  </div>
+</div>
